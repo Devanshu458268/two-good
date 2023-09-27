@@ -1,0 +1,254 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+*::selection{
+    background-color: black;
+    color: white;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.page1{
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: 15vw;
+    position: relative;
+}
+.page1 h1{
+    font-family: futura;
+    font-size: 14vw;
+    text-transform: uppercase;
+    padding: 28px;
+    line-height: 9.5vw;
+    
+}
+.page1 .videoContainer{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: 15px;
+    padding: 0px 25px;
+   
+}
+
+.page1 .videoContainer video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+   
+}
+.page1 .videoContainer .play{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    position: fixed; /* Absolute krne se play cursor ke saath sync nhi ho raha and baar baar postion change kr raha h */
+   opacity: 0; 
+   scale: 0;
+   font-family: futura;
+
+   
+}
+
+.play h6{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  
+
+}
+.page2 .elem{
+    
+    height: 100%;
+    width: 31.5%;
+    padding: 2vh 1vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+
+    
+    
+}
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(234, 146, 84);
+    display: flex;
+    flex-wrap: wrap; /* boxes will go in next line instead of squeezing their size*/
+    justify-content: space-evenly;
+    align-items:center;
+    background-color: rgba(244, 238, 238, 0.392);
+}
+
+.dets {
+    height: 50px;
+    background-color: rgb(78, 181, 169);
+    z-index: 99;
+    width: 70%;
+    position: absolute;
+    border-radius: 50px;
+
+   
+}
+.dets:hover{
+    transition: all 0.2s linear;
+    height: 200px;
+}
+.child{
+    
+    height: 50vh;
+    width: 40vw;
+    margin: 53px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.child img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+
+
+.cursor{
+    height: 150px;
+    width: 150px;
+    background-color: deepskyblue;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    scale: 0;
+
+}
+
+.nav{
+    min-height:40px ;
+    width: 100%;
+    position: fixed;
+    margin-top: -15vw;
+    z-index: 999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+.nav .part1 {
+    /* background-color: cornflowerblue; */
+    height: 85px;
+    overflow: hidden;
+   
+}
+.nav .part1 .svg2{
+    display: block;
+    
+}
+.nav .part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    margin: 10px 25px;
+    height: 20px;
+}
+
+.nav .part2 a{
+   text-decoration: none;
+    margin-left: 30px;
+    color: #1e1d1d;
+}
+.nav .part2 .icons i{
+    text-decoration: none;
+    margin: 5px 15px;
+     color: #1e1d1d;
+     font-size: 18px;
+     
+   
+ }
+
+ .nav .part2 .icons {
+    border-radius: 50px;
+    padding:10px 15px;
+    background-color: white;
+ 
+
+
+ }
+
+
+@media (max-width:600px) {
+    .page1 {
+        font-family: futura;
+       min-height: 40vh;
+        margin-top: 25vh;
+ 
+    }
+    .page1 h1{
+        font-family: futura;
+        font-size: 12vw;
+        text-transform: uppercase;
+        padding: 28px;
+        line-height: 2vw;
+ 
+    }
+    .page1 .videoContainer{
+        height: 40vh;
+        width: 100vw;
+        position: relative;
+        margin-top: 15px;
+        padding: 0px 25px;
+    }
+    .page2{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100vw;
+    }
+   
+    .page2 .elem{
+    
+       height: 100vh;
+       width: 100%;
+        padding: 2vh 6vw; 
+        overflow: hidden;
+        margin-bottom: 3vh;
+
+    }
+    .page2 .elem img{
+    
+        height: 100vh;
+        width: 100%;
+         padding: 4vh 5vw; 
+       
+     }
+     
+}
